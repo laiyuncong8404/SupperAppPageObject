@@ -1,0 +1,14 @@
+[caps]
+app = "E:/Appium_Script/SuperAppPageObject/CHiQ_7-4_test.apk"
+platformName = "android"
+platformVersion = "4.4.4"
+deviceName = "274b3f06"
+unicodeKeyboard = "true"
+resetKeyboard = "true"
+noReset = "false"
+
+[appium_lib]
+require = ["../spec/requires.rb"]
+sauce_username = ""
+sauce_access_key = ""
+wait = "10"
