@@ -19,16 +19,20 @@ module Pages
 				id('com.changhong.ssc.cookbook:id/username')
 			end
 			def msgcenter
-				text_exact('消息中心')
+				id('com.changhong.ssc.cookbook:id/msg_center')
+				# text_exact('消息中心')
 			end
 			def customer
-				text_exact('客服中心')
+				id('com.changhong.ssc.cookbook:id/customer_center')
+				# text_exact('客服中心')
 			end
-			def userbook
-				text_exact('产品说明书')
+			def productUserbook
+				id('com.changhong.ssc.cookbook:id/menu_center')
+				# text_exact('产品说明书')
 			end
 			def update
-				text_exact('软件更新')
+				id('com.changhong.ssc.cookbook:id/updata_center')
+				# text_exact('软件更新')
 			end
 		end
 	end

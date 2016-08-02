@@ -34,33 +34,28 @@ module Pages
 			end
 			def fastRegist_TextView
 				id('com.changhong.ssc.cookbook:id/fastRegist')
+			end			
+
+			def input_username_and_password(username, password)
+				self.username_EditText.clear
+				self.username_EditText.type username
+				self.password_EditText.clear
+				self.password_EditText.type password
 			end
 
 			def login(username=nil, password=nil)
-				self.username_EditText.clear
-				self.username_EditText.type username
-				self.password_EditText.clear
-				self.password_EditText.type password
+				input_username_and_password(username, password)
 				self.login_btn.click
-				sleep 2
 			end
 			def login_with_password_remember(username=nil, password=nil)
-				self.username_EditText.clear
-				self.username_EditText.type username
-				self.password_EditText.clear
-				self.password_EditText.type password
+				input_username_and_password(username, password)
 				self.rememberpswd_CheckBox.click if self.rememberpswd_CheckBox.attribute('checked')!=true
 				self.login_btn.click
-				sleep 2
 			end
 			def login_with_autologin(username=nil, password=nil)
-				self.username_EditText.clear
-				self.username_EditText.type username
-				self.password_EditText.clear
-				self.password_EditText.type password
+				input_username_and_password(username, password)
 				self.autologin_CheckBox.click if self.autologin_CheckBox.attribute('checked')!=true
 				self.login_btn.click
-				sleep 2
 			end
 		end
 	end

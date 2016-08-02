@@ -18,21 +18,24 @@ end
 
 
 RSpec.configure do |config|
-
-	config.before(:suite) do
+	config.run_all_when_everything_filtered = true
+	config.alias_it_should_behave_like_to :include_shared
+	config.before (:suite) do
 		yml_file  = File.expand_path(File.join(File.dirname(__FILE__), '..', 'data', 'data.yml'))
 		raise "Can not find #{yml_file}!" unless File.exists?(yml_file)
 		$data = YAML::load_file(yml_file)
-	end
 
-	config.before(:all) do
 		setup_driver
 		$driver.start_driver
 		promote_methods
-		set_wait (180)
 	end
 
-	config.after(:all) do
+	config.before (:all) do
+		set_wait (10)
+	end
+
+	config.after (:suite) do
+		close_app
 		$driver.driver_quit
 	end
 end

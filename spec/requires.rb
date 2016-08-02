@@ -7,7 +7,9 @@ begin
 rescue
   puts "No page objects found!"
 end
-# loading public_method
-# require_relative '../pages/public_method'
+# include shared_examples
+require_relative "./shared/shared_examples"
+require_relative "./shared/shared_context"
+
 # setup rspec
 require_relative '../common/spec_helper'

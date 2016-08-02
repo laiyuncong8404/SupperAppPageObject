@@ -1,0 +1,15 @@
+---
+registed_phoneNum: 18908030702
+right_phoneNum: 18908030702
+unregisted_phoneNum: 18908030703
+wrong_phoneNum: 13340774227
+right_password: 1234567890
+old_password: 1234567890
+new_password: 1234567890
+wrong_indentifyingCode: 123456
+wrong_password: 123456
+short_password: 123456
+nickname_original: '荷西'
+nickname_reset_11char: '和曦和曦和曦和曦和曦和曦'
+nickname_reset: '和曦'
+product_name: "ML-iBOX"
